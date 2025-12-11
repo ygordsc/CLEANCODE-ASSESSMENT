@@ -15,7 +15,7 @@ public class Entrega {
     }
 
     private String validarTexto(String texto) {
-        if (texto == null || texto.isEmpty()) {
+        if (texto == null || texto.isBlank()) {
             throw new IllegalArgumentException("Texto vazio");
         }
         return texto;

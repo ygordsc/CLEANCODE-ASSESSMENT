@@ -7,6 +7,8 @@ import org.infnet.cleancodeassessment.service.frete.FreteEconomico;
 import org.infnet.cleancodeassessment.service.frete.FreteExpresso;
 import org.infnet.cleancodeassessment.service.frete.FretePadrao;
 
+import java.util.Scanner;
+
 public class LogisticaApplication {
     public static void main(String[] args) {
         CalculadoraFrete freteEconomico = new FreteEconomico();
@@ -23,16 +25,15 @@ public class LogisticaApplication {
         System.out.println(servicoEco.gerarResumoPedido(entrega));
 
         System.out.println("\n------------------\n");
-        Entrega entrega2 = new Entrega("Pedro Santos", "Rua Olavo Bilac, 234", 5);
+        Entrega entrega2 = new Entrega("Pedro Santos", "Rua Olavo Bilac, 234", 6);
         System.out.println(servicoPadrao.gerarEtiqueta(entrega2));
         System.out.println("\n");
         System.out.println(servicoPadrao.gerarResumoPedido(entrega2));
 
         System.out.println("\n------------------\n");
-        Entrega entrega3 = new Entrega("Paulo Souza", "Rua Clarice Lispector, 345", 6);
+        Entrega entrega3 = new Entrega("Paulo Souza", "Rua Clarice Lispector, 345", 7);
         System.out.println(servicoExpresso.gerarEtiqueta(entrega3));
         System.out.println("\n");
         System.out.println(servicoExpresso.gerarResumoPedido(entrega3));
-
     }
 }
